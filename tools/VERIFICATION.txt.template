@@ -1,4 +1,4 @@
-VERIFICATION
+﻿VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
@@ -17,16 +17,16 @@ expected to invalidate a checksum verification when downloading from this URL.
 As a workaround, this package's creation process includes the creation of a historical
 snapshot via the Internet Archive's Wayback Machine to create a permanent backup source.
 This snapshot can be accessed at the following URL:
-https://web.archive.org/web/20220812035450/https://www.nirsoft.net/utils/wifidiagnosticsview.zip
+%snapshotUrl%
 
-The following PowerShell command will print a calculated SHA256 hash:
+The following PowerShell command will print a calculated %checksumType% hash:
 
-    (Get-FileHash -Path wifidiagnosticsview.zip -Algorithm SHA256).Hash
+    (Get-FileHash -Path wifidiagnosticsview.zip -Algorithm %checksumType%).Hash
 
 This command should be executed against an independently downloaded archive, as well
 as the copy distributed with the package. Both hash values should be identical. A
 matching hash value should confirm that no corruption or tampering has occurred
 during this package's generation process.
 
-For reference, the following SHA256 hash was calculated during the package's automated creation:
-5EA1D65F947CC3724C5EE7528E9B07CC3438CBEFF267F2D88CD6E02AD82B94F2
+For reference, the following %checksumType% hash was calculated during the package's automated creation:
+%checksumValue%
