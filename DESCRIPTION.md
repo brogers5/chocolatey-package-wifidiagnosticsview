@@ -14,3 +14,10 @@ WifiDiagnosticsView is a Wifi diagnostics tool for Windows 11/10/8/7/Vista that 
 ## Package Parameters
 
 * `/Start` - Automatically start WifiDiagnosticsView after installation completes.
+
+## Package Notes
+For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
+
+```shell
+choco feature enable -n=useRememberedArgumentsForUpgrades
+```
