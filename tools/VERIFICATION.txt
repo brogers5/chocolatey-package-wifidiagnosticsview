@@ -17,7 +17,7 @@ expected to invalidate a checksum verification when downloading from this URL.
 As a workaround, this package's creation process includes the creation of a historical
 snapshot via the Internet Archive's Wayback Machine to create a permanent backup source.
 This snapshot can be accessed at the following URL:
-https://web.archive.org/web/20220812035450/https://www.nirsoft.net/utils/wifidiagnosticsview.zip
+https://web.archive.org/web/20220818215106/https://www.nirsoft.net/utils/wifidiagnosticsview.zip
 
 The following PowerShell command will print a calculated SHA256 hash:
 
@@ -29,4 +29,4 @@ matching hash value should confirm that no corruption or tampering has occurred
 during this package's generation process.
 
 For reference, the following SHA256 hash was calculated during the package's automated creation:
-5EA1D65F947CC3724C5EE7528E9B07CC3438CBEFF267F2D88CD6E02AD82B94F2
+154A7333A4A435857F664DF5810CD0C5353E5566A3FF34F24A2718D2F3B02899
