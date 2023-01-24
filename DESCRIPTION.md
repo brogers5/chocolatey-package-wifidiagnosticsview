@@ -19,5 +19,5 @@ WifiDiagnosticsView is a Wifi diagnostics tool for Windows 11/10/8/7/Vista that 
 For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
 
 ```shell
-choco feature enable --name=useRememberedArgumentsForUpgrades
+choco feature enable --name="'useRememberedArgumentsForUpgrades'"
 ```
