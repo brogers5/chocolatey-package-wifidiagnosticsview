@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wifidiagnosticsview</id>
-    <version>1.02</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/tree/v1.02</packageSourceUrl>
+    <version>1.03</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/tree/v1.03</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>WifiDiagnosticsView</title>
     <authors>Nir Sofer</authors>
     <projectUrl>https://www.nirsoft.net/utils/wifi_diagnostics_view.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-wifidiagnosticsview@ccb25ee5752ef92b55e79309a59db71067938260/wifidiagnosticsview.png</iconUrl>
-    <copyright>Copyright (c) 2022 Nir Sofer</copyright>
+    <copyright>Copyright (c) 2022-2023 Nir Sofer</copyright>
     <licenseUrl>https://www.nirsoft.net/utils/wifi_diagnostics_view.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>wifidiagnosticsview wifi diagnostics wireless network access-point access point ssid bssid troubleshooting portable freeware</tags>
@@ -18,8 +18,10 @@
     <releaseNotes>[Version History](https://www.nirsoft.net/utils/wifi_diagnostics_view.html)</releaseNotes>
     <description><![CDATA[
 ---
+
 ### [choco://wifidiagnosticsview](choco://wifidiagnosticsview)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://community.chocolatey.org/packages/choco-protocol-support)
+
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
 
 ---
 
@@ -31,13 +33,17 @@ WifiDiagnosticsView is a Wifi diagnostics tool for Windows 11/10/8/7/Vista that 
 
 ## Package Parameters
 
+* `/NoShim` - Opt out of creating a GUI shim.
+* `/NoDesktopShortcut` - Opt out of creating a Desktop shortcut.
+* `/NoProgramsShortcut` - Opt out of creating a Programs shortcut in your Start Menu.
 * `/Start` - Automatically start WifiDiagnosticsView after installation completes.
 
 ## Package Notes
+
 For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
 
 ```shell
-choco feature enable -n=useRememberedArgumentsForUpgrades
+choco feature enable --name="'useRememberedArgumentsForUpgrades'"
 ```
 ]]></description>
   </metadata>
