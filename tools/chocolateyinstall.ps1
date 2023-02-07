@@ -14,17 +14,21 @@ Get-ChocolateyUnzip @packageArgs
 Remove-Item -Path $archiveFilePath -Force -ErrorAction SilentlyContinue
 
 $softwareName = 'WifiDiagnosticsView'
+$binaryFileName = "$softwareName.exe"
+$linkName = "$softwareName.lnk"
+$targetPath = Join-Path -Path $toolsDirectory -ChildPath $binaryFileName
 
-#Create Start Menu shortcut
-$programsDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::Programs)
-$shortcutFilePath = Join-Path -Path $programsDirectory -ChildPath "$softwareName.lnk"
-$targetPath = Join-Path -Path $toolsDirectory -ChildPath 'WifiDiagnosticsView.exe'
-Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
+$pp = Get-PackageParameters
+if (!$pp.NoProgramsShortcut)
+{
+    $programsDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::Programs)
+    $shortcutFilePath = Join-Path -Path $programsDirectory -ChildPath $linkName
+    Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
+}
 
 #Create GUI shim
 Set-Content -Path "$targetPath.gui" -Value $null -ErrorAction SilentlyContinue
 
-$pp = Get-PackageParameters
 if ($pp.Start)
 {
   try
