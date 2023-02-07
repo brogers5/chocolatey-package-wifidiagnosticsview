@@ -88,7 +88,7 @@ function global:au_SearchReplace {
         }
         "$($Latest.PackageName).nuspec" = @{
             "(<packageSourceUrl>)[^<]*(</packageSourceUrl>)" = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
-            "(<copyright>)[^<]*(</copyright>)" = "`$1Copyright (c) $(Get-Date -Format yyyy) Nir Sofer`$2"
+            "(<copyright>)[^<]*(</copyright>)" = "`$1Copyright (c) 2022-$(Get-Date -Format yyyy) Nir Sofer`$2"
         }
         'tools\VERIFICATION.txt' = @{
             '%archivedDownloadUrl%' = "$($Latest.ArchivedDownloadURL)"
