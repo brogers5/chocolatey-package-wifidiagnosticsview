@@ -1,9 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $programsDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::Programs)
-$shortcutFilePath = Join-Path -Path $programsDirectory -ChildPath 'WifiDiagnosticsView.lnk'
+$desktopDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::DesktopDirectory)
+$linkName = 'WifiDiagnosticsView.lnk'
 
-if (Test-Path -Path $shortcutFilePath)
+$programsShortcutFilePath = Join-Path -Path $programsDirectory -ChildPath $linkName
+$desktopShortcutFilePath = Join-Path -Path $desktopDirectory -ChildPath $linkName
+
+if (Test-Path -Path $programsShortcutFilePath)
 {
-    Remove-Item -Path $shortcutFilePath -Force
+    Remove-Item -Path $programsShortcutFilePath -Force
+}
+
+if (Test-Path -Path $desktopShortcutFilePath)
+{
+    Remove-Item -Path $desktopShortcutFilePath -Force
 }

@@ -16,6 +16,7 @@ WifiDiagnosticsView is a Wifi diagnostics tool for Windows 11/10/8/7/Vista that 
 ## Package Parameters
 
 * `/NoShim` - Opt out of creating a GUI shim.
+* `/NoDesktopShortcut` - Opt out of creating a Desktop shortcut.
 * `/NoProgramsShortcut` - Opt out of creating a Programs shortcut in your Start Menu.
 * `/Start` - Automatically start WifiDiagnosticsView after installation completes.
 

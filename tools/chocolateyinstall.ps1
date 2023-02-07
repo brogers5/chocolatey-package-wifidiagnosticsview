@@ -26,6 +26,13 @@ if (!$pp.NoProgramsShortcut)
     Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
 }
 
+if (!$pp.NoDesktopShortcut)
+{
+    $desktopDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::DesktopDirectory)
+    $shortcutFilePath = Join-Path -Path $desktopDirectory -ChildPath $linkName
+    Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
+}
+
 if ($pp.NoShim)
 {
     #Create shim ignore file
