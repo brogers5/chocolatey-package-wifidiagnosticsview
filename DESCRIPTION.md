@@ -1,7 +1,9 @@
 
 ---
+
 ### [choco://wifidiagnosticsview](choco://wifidiagnosticsview)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://community.chocolatey.org/packages/choco-protocol-support)
+
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
 
 ---
 
@@ -16,6 +18,7 @@ WifiDiagnosticsView is a Wifi diagnostics tool for Windows 11/10/8/7/Vista that 
 * `/Start` - Automatically start WifiDiagnosticsView after installation completes.
 
 ## Package Notes
+
 For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
 
 ```shell
