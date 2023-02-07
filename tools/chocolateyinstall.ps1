@@ -19,20 +19,6 @@ $linkName = "$softwareName.lnk"
 $targetPath = Join-Path -Path $toolsDirectory -ChildPath $binaryFileName
 
 $pp = Get-PackageParameters
-if (!$pp.NoProgramsShortcut)
-{
-    $programsDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::Programs)
-    $shortcutFilePath = Join-Path -Path $programsDirectory -ChildPath $linkName
-    Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
-}
-
-if (!$pp.NoDesktopShortcut)
-{
-    $desktopDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::DesktopDirectory)
-    $shortcutFilePath = Join-Path -Path $desktopDirectory -ChildPath $linkName
-    Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
-}
-
 if ($pp.NoShim)
 {
     #Create shim ignore file
@@ -44,6 +30,20 @@ else
     #Create GUI shim
     $guiShimPath = Join-Path -Path $toolsDirectory -ChildPath "$binaryFileName.gui"
     Set-Content -Path $guiShimPath -Value $null -ErrorAction SilentlyContinue
+}
+
+if (!$pp.NoDesktopShortcut)
+{
+    $desktopDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::DesktopDirectory)
+    $shortcutFilePath = Join-Path -Path $desktopDirectory -ChildPath $linkName
+    Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
+}
+
+if (!$pp.NoProgramsShortcut)
+{
+    $programsDirectory = [Environment]::GetFolderPath([Environment+SpecialFolder]::Programs)
+    $shortcutFilePath = Join-Path -Path $programsDirectory -ChildPath $linkName
+    Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
 }
 
 if ($pp.Start)
