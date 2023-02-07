@@ -26,8 +26,18 @@ if (!$pp.NoProgramsShortcut)
     Install-ChocolateyShortcut -ShortcutFilePath $shortcutFilePath -TargetPath $targetPath -ErrorAction SilentlyContinue
 }
 
-#Create GUI shim
-Set-Content -Path "$targetPath.gui" -Value $null -ErrorAction SilentlyContinue
+if ($pp.NoShim)
+{
+    #Create shim ignore file
+    $ignoreFilePath = Join-Path -Path $toolsDirectory -ChildPath "$binaryFileName.ignore"
+    Set-Content -Path $ignoreFilePath -Value $null -ErrorAction SilentlyContinue
+}
+else
+{
+    #Create GUI shim
+    $guiShimPath = Join-Path -Path $toolsDirectory -ChildPath "$binaryFileName.gui"
+    Set-Content -Path $guiShimPath -Value $null -ErrorAction SilentlyContinue
+}
 
 if ($pp.Start)
 {
