@@ -1,20 +1,20 @@
 # <img src="https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-wifidiagnosticsview@ccb25ee5752ef92b55e79309a59db71067938260/wifidiagnosticsview.png" width="48" height="48"/> Chocolatey Package: [WifiDiagnosticsView](https://community.chocolatey.org/packages/wifidiagnosticsview)
 
-[![Chocolatey package version](https://img.shields.io/chocolatey/v/wifidiagnosticsview.svg)](https://community.chocolatey.org/packages/wifidiagnosticsview)
-[![Chocolatey package download count](https://img.shields.io/chocolatey/dt/wifidiagnosticsview.svg)](https://community.chocolatey.org/packages/wifidiagnosticsview)
+[![Latest package version shield](https://img.shields.io/chocolatey/v/wifidiagnosticsview.svg)](https://community.chocolatey.org/packages/wifidiagnosticsview)
+[![Total package download count shield](https://img.shields.io/chocolatey/dt/wifidiagnosticsview.svg)](https://community.chocolatey.org/packages/wifidiagnosticsview)
 
 ## Install
 
 [Install Chocolatey](https://chocolatey.org/install), and run the following command to install the latest approved stable version from the Chocolatey Community Repository:
 
 ```shell
-choco install wifidiagnosticsview) --source="'https://community.chocolatey.org/api/v2'"
+choco install wifidiagnosticsview --source="'https://community.chocolatey.org/api/v2'"
 ```
 
-Alternatively, the packages as published on the Chocolatey Community Repository will also be mirrored on this repository's [Releases page](https://github.com/brogers5/chocolatey-package-wifidiagnosticsview)/releases). The `nupkg` can be installed from the current directory as follows:
+Alternatively, the packages as published on the Chocolatey Community Repository will also be mirrored on this repository's [Releases page](https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/releases). The `nupkg` can be installed from the current directory as follows:
 
 ```shell
-choco install wifidiagnosticsview) --source="'.'"
+choco install wifidiagnosticsview --source="'.'"
 ```
 
 ## Build
@@ -23,9 +23,16 @@ choco install wifidiagnosticsview) --source="'.'"
 
 Once cloned, simply run `build.ps1`. The ZIP archive is intentionally untracked to avoid bloating the repository, so the script will download the WifiDiagnosticsView portable ZIP archive from the mirror created by this package (to ensure reproducibility in case of an older version), then packs everything together.
 
-A successful build will create `wifidiagnosticsview.x.y.nupkg`, where `x.y` should be the Nuspec's `version` value at build time.
+A successful build will create `wifidiagnosticsview.x.y.z.nupkg`, where `x.y.z` should be the Nuspec's normalized `version` value at build time.
 
-Note that Chocolatey package builds are non-deterministic. Consequently, an independently built package will fail a checksum validation against officially published packages.
+>**Note**
+>As of Chocolatey v2.0.0, `version` values are normalized to contain a [SemVer 2.0.0](https://semver.org/spec/v2.0.0.html)-compliant patch number (i.e. only 2 segments will no longer be honored). Legacy package versions that did not contain these will be padded with a patch number of 0. Going forward, `version` will be padded accordingly for behavior consistency between v1 and v2 Chocolatey releases.
+
+>**Note**
+>As of Chocolatey v2.0.0, [leading zeros will no longer be used/honored within version numbers](https://github.com/chocolatey/choco/issues/1174). Legacy package versions that contain these will be normalized to remove them from the resulting filename. Going forward, `version` will be normalized accordingly for behavior consistency between v1 and v2 Chocolatey releases.
+
+>**Note**
+>Chocolatey package builds are non-deterministic. Consequently, an independently built package's checksum will not match that of the officially published package.
 
 ## Update
 
