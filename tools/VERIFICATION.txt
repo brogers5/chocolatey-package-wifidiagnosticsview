@@ -21,14 +21,14 @@ As a workaround, this package's creation process includes the creation of histor
 the Internet Archive's Wayback Machine to create a permanent backup source.
 These snapshots can be accessed at the following URLs:
 
-Download: https://web.archive.org/web/20230206172016/https://www.nirsoft.net/utils/wifidiagnosticsview.zip
-Checksums: https://web.archive.org/web/20230207013230/https://www.nirsoft.net/hash_check/?software=wifidiagnosticsview
+Download: https://web.archive.org/web/20230712221117/https://www.nirsoft.net/utils/wifidiagnosticsview.zip
+Checksums: https://web.archive.org/web/20230712220847/https://www.nirsoft.net/hash_check/?software=wifidiagnosticsview
 
 For convenience, the following checksums were published at the time of this package's creation:
-MD5: fd08065116c1b55332dd81470e71d8d7
-SHA1: 06457ee96e7519c932bc080612aeb107d82bb164
-SHA256: 1b68e4e8609d26a05d60681e076b52b785862b09890ce7a4a3b46111aa61d68b
-SHA512: e1b659224b40c169698729e8a49f9bf6b6265877b0b5316bb0e9901c9f5c9a63c02e3680a638f4a2878a2fece81b4fad3df82a36a06cfe74e98182fd445ab97d
+MD5: 1bc63e3b068e87d6bda95fc2a1da5b6f
+SHA1: 60af5a127473e716020794623ad49249abca0441
+SHA256: 6bce2e81f0b0381ce4cbf66fd9a8d7be08430d58577c43f7153957de7affa0ba
+SHA512: 1a2f6cf96d5eae26242e41cb5f1567b47f2a6e10fe1b01ac5d9263ad367d330091ab6b9e3a321ca32b67fee31336adad6103d74f20414bf79178dc115cea007f
 
 Note that the MD5 and SHA1 hash algorithms are no longer considered secure by modern standards.
 For tamper protection, it's recommended to validate against either a SHA256 or SHA512 hash instead.

@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wifidiagnosticsview</id>
-    <version>1.03</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/tree/v1.03</packageSourceUrl>
+    <version>1.5.0</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/tree/v1.5.0</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>WifiDiagnosticsView</title>
     <authors>Nir Sofer</authors>
