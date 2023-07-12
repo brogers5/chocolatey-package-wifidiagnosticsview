@@ -98,10 +98,26 @@ function global:au_SearchReplace {
     }
 }
 
+function ConvertTo-NormalizedVersion([version] $Version) {
+    if ($Version.Build -eq -1) {
+        return "$Version.0"
+    }
+    if ($Version.Revision -eq 0) {
+        return $Version.ToString(3)
+    }
+
+    return $Version.ToString()
+}
+
 function global:au_GetLatest {
     $script:response = Invoke-WebRequest -Uri $projectUri -UserAgent $userAgent -UseBasicParsing
 
-    $version = [Regex]::Matches($response.Content, "<td>WifiDiagnosticsView v(.*)").Groups[1].Value
+    $softwareVersion = [Regex]::Matches($response.Content, "<td>WifiDiagnosticsView v(.*)").Groups[1].Value
+
+    #As of Chocolatey v2.0.0, leading zeros in version numbers are no longer honored,
+    #and a third version segment is mandatory.
+    #For behavior consistency across major Chocolatey versions, normalize the package version accordingly.
+    $version = ConvertTo-NormalizedVersion -Version $softwareVersion
 
     return @{
         Url32   = 'https://www.nirsoft.net/utils/wifidiagnosticsview.zip'
