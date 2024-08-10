@@ -3,29 +3,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wifidiagnosticsview</id>
-    <version>1.5.0</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/tree/v1.5.0</packageSourceUrl>
+    <version>1.6.0</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/tree/v1.6.0</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>WifiDiagnosticsView</title>
     <authors>Nir Sofer</authors>
     <projectUrl>https://www.nirsoft.net/utils/wifi_diagnostics_view.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-wifidiagnosticsview@ccb25ee5752ef92b55e79309a59db71067938260/wifidiagnosticsview.png</iconUrl>
-    <copyright>Copyright (c) 2022-2023 Nir Sofer</copyright>
+    <copyright>Copyright (c) 2022-2024 Nir Sofer</copyright>
     <licenseUrl>https://www.nirsoft.net/utils/wifi_diagnostics_view.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>wifidiagnosticsview wifi diagnostics wireless network access-point access point ssid bssid troubleshooting portable freeware</tags>
     <summary>Wifi diagnostics tool for Windows 11/10/8/7/Vista</summary>
     <releaseNotes>[Version History](https://www.nirsoft.net/utils/wifi_diagnostics_view.html)</releaseNotes>
-    <description><![CDATA[
----
-
-### [choco://wifidiagnosticsview](choco://wifidiagnosticsview)
-
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
-
----
-
-## WifiDiagnosticsView
+    <description><![CDATA[## WifiDiagnosticsView
 
 WifiDiagnosticsView is a Wifi diagnostics tool for Windows 11/10/8/7/Vista that monitors the wireless network service of Windows operating system and displays any event that occurs while WifiDiagnosticsView is running, including wireless networks scan, connect to access point, disconnect from access point, failed connection attempt, and so on.. When a failure is detected, the error code and error description is displayed.
 
