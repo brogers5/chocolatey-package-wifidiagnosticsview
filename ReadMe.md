@@ -34,7 +34,7 @@ A successful build will create `wifidiagnosticsview.x.y.z.nupkg`, where `x.y.z` 
 
 ## Update
 
-This package should be automatically updated by the [Chocolatey Automatic Package Updater Module](https://github.com/majkinetor/au). If it is outdated by more than a few days, please [open an issue](https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/issues).
+This package should be automatically updated by the [Chocolatey Automatic Package Updater Module](https://github.com/majkinetor/au), with mirroring implemented by the [Selenium PowerShell module](https://github.com/adamdriscoll/selenium-powershell) driving save requests to [the Internet Archive's Wayback Machine](https://web.archive.org/) via [Mozilla Firefox](https://www.mozilla.org/firefox/new/). If it is outdated by more than a few days, please [open an issue](https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/issues).
 
 AU expects the parent directory that contains this repository to share a name with the Nuspec (`wifidiagnosticsview`). Your local repository should therefore be cloned accordingly:
 
