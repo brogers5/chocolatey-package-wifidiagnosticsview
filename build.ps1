@@ -6,7 +6,7 @@ $nuspecFileRelativePath = Join-Path -Path $currentPath -ChildPath 'wifidiagnosti
 $version = [Version] $nuspec.package.metadata.version
 
 $global:Latest = @{
-    Url32   = 'https://web.archive.org/web/20241126034328if_/https://www.nirsoft.net/utils/wifidiagnosticsview.zip'
+    Url32   = 'https://web.archive.org/web/20251002015925if_/https://www.nirsoft.net/utils/wifidiagnosticsview.zip'
     Version = $version
 }
 

@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wifidiagnosticsview</id>
-    <version>1.7.0</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/tree/v1.7.0</packageSourceUrl>
+    <version>1.8.0</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-wifidiagnosticsview/tree/v1.8.0</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>WifiDiagnosticsView</title>
     <authors>Nir Sofer</authors>
     <projectUrl>https://www.nirsoft.net/utils/wifi_diagnostics_view.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-wifidiagnosticsview@ccb25ee5752ef92b55e79309a59db71067938260/wifidiagnosticsview.png</iconUrl>
-    <copyright>Copyright (c) 2022-2024 Nir Sofer</copyright>
+    <copyright>Copyright (c) 2022-2025 Nir Sofer</copyright>
     <licenseUrl>https://www.nirsoft.net/utils/wifi_diagnostics_view.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>wifidiagnosticsview wifi diagnostics wireless network access-point access point ssid bssid troubleshooting portable freeware</tags>
